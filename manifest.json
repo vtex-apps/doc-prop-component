@@ -1,8 +1,8 @@
 {
   "vendor": "vtex",
-  "name": "doc-prop",
-  "version": "0.0.11",
-  "title": "docProp",
+  "name": "doc-prop-component",
+  "version": "0.0.12",
+  "title": "Doc Prop Component",
   "description": "Countdown component",
   "defaultLocale": "pt-BR",
   "builders": {
