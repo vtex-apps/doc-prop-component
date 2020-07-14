@@ -1,4 +1,4 @@
-import { ClientsConfig, LRUCache, Service, ServiceContext } from '@vtex/api'
+import { ClientsConfig, LRUCache, ParamsContext, RecorderState, Service, ServiceContext } from '@vtex/api'
 
 import { prop } from 'ramda'
 import { Clients } from './clients'
@@ -34,13 +34,13 @@ declare global {
   type Context = ServiceContext<Clients, State>
 
   // The shape of our State object found in `ctx.state`. This is used as state bag to communicate between middlewares.
-  interface State {
+  interface State extends RecorderState {
     code: number
   }
 }
 
 // Export a service that defines route handlers and client options.
-export default new Service<Clients, State>({
+export default new Service<Clients, State, ParamsContext>({
   clients,
   graphql: {
     resolvers: {
