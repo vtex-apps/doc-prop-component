@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "doc-prop-component",
-  "version": "0.0.12",
+  "version": "0.0.1",
   "title": "Doc Prop Component",
   "description": "Countdown component",
   "defaultLocale": "pt-BR",
@@ -21,12 +21,14 @@
     "vtex.styleguide": "9.x",
     "vtex.css-handles": "0.x"
   },
-  "policies": [{
-    "name": "outbound-access",
-    "attrs": {
-      "host": "api.giphy.com",
-      "path": "*"
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.giphy.com",
+        "path": "*"
+      }
     }
-  }],
+  ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
