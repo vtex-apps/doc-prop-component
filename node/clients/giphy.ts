@@ -11,18 +11,21 @@ export default class Giphy extends ExternalClient {
   constructor(
     context: IOContext,
     options ? : InstanceOptions) {
-    super('https://api.giphy.com/v1/gifs/', context, options)
+    super('https://api.giphy.com/v1/gifs', context, options)
   }
 
   public async translateGif(query: string): Promise<any> {
-    const { 
-      data: {
-        images: {
-          original: {
-            url,
-          },
-        },
-      },
+    // const { 
+    //   data: {
+    //     images: {
+    //       original: {
+    //         url,
+    //       },
+    //     },
+    //   },
+    // }  
+    const {
+      res, 
     } = await this.http.get(
       this.routes.translate(), 
       {
@@ -35,7 +38,6 @@ export default class Giphy extends ExternalClient {
         },
       }
     )
-
-    return {url}
+    return res ?? ''
   }
 }
