@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "doc-prop-component",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "title": "Doc Prop Component",
   "description": "Countdown component",
   "defaultLocale": "pt-BR",
